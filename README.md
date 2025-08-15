@@ -33,7 +33,7 @@ It is built to highlight the core claim: **speed without context is misdirection
 11. [Evaluation Plan](#evaluation-plan)
 12. [Extending the System](#extending-the-system)
 13. [Limitations](#limitations)
-14. [License](#license)
+
 
 ---
 
