@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Intersection Priority System - Output Visualizations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #d63384;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .subtitle {
+            text-align: center;
+            color: #6c757d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .section h2 {
+            color: #495057;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .visualization-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .visualization-item:hover {
+            transform: translateY(-5px);
+        }
+        .visualization-item h3 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .visualization-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+        }
+        .summary-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .summary-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        .comparison-section {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .comparison-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        .flow-section {
+            background: linear-gradient(135deg, #45b7d1 0%, #96ceb4 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .flow-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        .priority-section {
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .priority-section h2 {
+            color: white;
+            border-bottom: 3px solid white;
+        }
+        .score-section {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        .score-section h2 {
+            color: #333;
+            border-bottom: 3px solid #333;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 Emergency Intersection Priority System</h1>
+        <p class="subtitle">Output Visualizations & Analysis Results</p>
+
+        <!-- Summary Section -->
+        <div class="summary-section">
+            <h2>📊 Overall Summary</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>System Output Summary</h3>
+                    <img src="output_summary.png" alt="Output Summary">
+                </div>
+            </div>
+        </div>
+
+        <!-- Priority Charts Section -->
+        <div class="priority-section">
+            <h2>🎯 Priority Analysis Charts</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>Emergency Chaos Scenario</h3>
+                    <img src="output_priority_chart_1.png" alt="Emergency Chaos Priority Chart">
+                </div>
+                <div class="visualization-item">
+                    <h3>Civilian Only Scenario</h3>
+                    <img src="output_priority_chart_2.png" alt="Civilian Only Priority Chart">
+                </div>
+                <div class="visualization-item">
+                    <h3>Emergency vs VIP Scenario</h3>
+                    <img src="output_priority_chart_3.png" alt="Emergency vs VIP Priority Chart">
+                </div>
+            </div>
+        </div>
+
+        <!-- Score Breakdown Section -->
+        <div class="score-section">
+            <h2>📈 Score Breakdown Analysis</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>Emergency Chaos Score Components</h3>
+                    <img src="output_score_breakdown_1.png" alt="Emergency Chaos Score Breakdown">
+                </div>
+                <div class="visualization-item">
+                    <h3>Civilian Only Score Components</h3>
+                    <img src="output_score_breakdown_2.png" alt="Civilian Only Score Breakdown">
+                </div>
+                <div class="visualization-item">
+                    <h3>Emergency vs VIP Score Components</h3>
+                    <img src="output_score_breakdown_3.png" alt="Emergency vs VIP Score Breakdown">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision Flow Section -->
+        <div class="flow-section">
+            <h2>🔄 Decision Flow Process</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>Emergency Chaos Decision Flow</h3>
+                    <img src="output_decision_flow_1.png" alt="Emergency Chaos Decision Flow">
+                </div>
+                <div class="visualization-item">
+                    <h3>Civilian Only Decision Flow</h3>
+                    <img src="output_decision_flow_2.png" alt="Civilian Only Decision Flow">
+                </div>
+                <div class="visualization-item">
+                    <h3>Emergency vs VIP Decision Flow</h3>
+                    <img src="output_decision_flow_3.png" alt="Emergency vs VIP Decision Flow">
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Section -->
+        <div class="comparison-section">
+            <h2>📊 Scenario Comparison Analysis</h2>
+            <div class="visualization-grid">
+                <div class="visualization-item">
+                    <h3>Cross-Scenario Comparison</h3>
+                    <img src="output_comparison_chart.png" alt="Scenario Comparison Chart">
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Insights Section -->
+        <div class="section">
+            <h2>🔍 Key Insights from Analysis</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b6b;">
+                    <h3 style="color: #ff6b6b;">🚑 Emergency Priority</h3>
+                    <p>Ambulance consistently receives highest priority (118.8 points) when lights are active, followed by fire engines (113.1 points) and police (92.2 points).</p>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #4ecdc4;">
+                    <h3 style="color: #4ecdc4;">📊 Score Components</h3>
+                    <p>Base priority (vehicle type) + 15 points for active lights + proximity bonus + arrival time bonus = total priority score.</p>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #45b7d1;">
+                    <h3 style="color: #45b7d1;">🎯 Confidence Levels</h3>
+                    <p>All scenarios achieved 100% confidence, indicating the system is highly reliable for these test cases.</p>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #feca57;">
+                    <h3 style="color: #feca57;">⚡ Decision Process</h3>
+                    <p>The system follows a clear 5-step process: Image Input → Vision Analysis → Priority Scoring → Tie Breaking → LLM Cross-Check → Final Output.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Output Format Section -->
+        <div class="section">
+            <h2>📋 Output Format Explanation</h2>
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace;">
+                <h3>JSON Response Structure:</h3>
+                <pre style="background: #343a40; color: #fff; padding: 15px; border-radius: 5px; overflow-x: auto;">
+{
+  "ordered_ids": ["ambulance_1", "fire_engine_1", "police_1"],
+  "scores": {
+    "ambulance_1": 118.8,
+    "fire_engine_1": 113.1,
+    "police_1": 92.2
+  },
+  "reasoning": "Scores blend emergency level, right-of-way signals, proximity and arrival.",
+  "legality_notes": "General rule: yield to emergency vehicles with lights/sirens active.",
+  "confidence": 1.0,
+  "requires_human_confirmation": false
+}</pre>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Emergency Intersection Priority System</strong> - AI that asks before it acts</p>
+            <p>Generated visualizations show transparent, auditable decision-making for emergency vehicle right-of-way</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Scenario,Traffic side,Officer directing,Naive LLM order,Rule-engine order,Different?,Rule reasoning
+"S1: US, all on call",right,False,ambulance > fire_engine > police > presidential,ambulance > fire_engine > police > presidential,False,"Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."
+S2: Ambulance NOT on call,right,False,ambulance > fire_engine > police > presidential,fire_engine > police > ambulance > presidential,True,"Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."
+S3: Police directing,right,True,ambulance > fire_engine > police > presidential,ambulance > fire_engine > police > presidential,False,Officer directing: follow officer; default to clearing life-critical path first.
+S4: UK left-hand traffic,left,False,ambulance > fire_engine > police > presidential,ambulance > fire_engine > police > presidential,False,"Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by left-hand rule, then arrival."
+S5: Presidential motorcade (escort active),right,False,ambulance > fire_engine > police > presidential,ambulance > fire_engine > police > presidential,False,"Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."

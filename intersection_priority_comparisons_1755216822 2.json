@@ -1,0 +1,47 @@
+[
+  {
+    "Scenario": "S1: US, all on call",
+    "Traffic side": "right",
+    "Officer directing": false,
+    "Naive LLM order": "ambulance > fire_engine > police > presidential",
+    "Rule-engine order": "ambulance > fire_engine > police > presidential",
+    "Different?": false,
+    "Rule reasoning": "Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."
+  },
+  {
+    "Scenario": "S2: Ambulance NOT on call",
+    "Traffic side": "right",
+    "Officer directing": false,
+    "Naive LLM order": "ambulance > fire_engine > police > presidential",
+    "Rule-engine order": "fire_engine > police > ambulance > presidential",
+    "Different?": true,
+    "Rule reasoning": "Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."
+  },
+  {
+    "Scenario": "S3: Police directing",
+    "Traffic side": "right",
+    "Officer directing": true,
+    "Naive LLM order": "ambulance > fire_engine > police > presidential",
+    "Rule-engine order": "ambulance > fire_engine > police > presidential",
+    "Different?": false,
+    "Rule reasoning": "Officer directing: follow officer; default to clearing life-critical path first."
+  },
+  {
+    "Scenario": "S4: UK left-hand traffic",
+    "Traffic side": "left",
+    "Officer directing": false,
+    "Naive LLM order": "ambulance > fire_engine > police > presidential",
+    "Rule-engine order": "ambulance > fire_engine > police > presidential",
+    "Different?": false,
+    "Rule reasoning": "Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by left-hand rule, then arrival."
+  },
+  {
+    "Scenario": "S5: Presidential motorcade (escort active)",
+    "Traffic side": "right",
+    "Officer directing": false,
+    "Naive LLM order": "ambulance > fire_engine > police > presidential",
+    "Rule-engine order": "ambulance > fire_engine > police > presidential",
+    "Different?": false,
+    "Rule reasoning": "Rule engine: life-safety > apparatus mass > proximity/arrival; tie-break by right-hand rule, then arrival."
+  }
+]
